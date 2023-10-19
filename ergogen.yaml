@@ -27,15 +27,15 @@ points:
         near:
         home:
           key.spread: 21.25
-          key.splay: -20
-          key.origin: [-11.75, -9]
+          key.splay: -24
+          key.origin: [-14.75, -7]
         far:
           key.spread: 21.25
-          key.splay: -20
-          key.origin: [-9.5, -9]
+          key.splay: -24
+          key.origin: [-13.5, -7]
       rows:
         thumb:
   rotate: -20
   mirror:
     ref: matrix_pinky_home
-    distance: 223.7529778
+    distance: 230
