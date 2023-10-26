@@ -39,3 +39,37 @@ points:
   mirror:
     ref: matrix_pinky_home
     distance: 230
+units:
+  xspace: cx
+  yspace: cy
+  capsx: 16.5
+  capsy: 16.5
+  pcb_outline_spacingx: capsx + 1
+  pcb_outline_spacingy: capsy + 1
+outlines:
+  keycaps:
+  - what: rectangle
+    where: true
+    size: [capsx,capsy]
+  pcb_outline:
+  - what: polygon
+    points:
+    - ref: matrix_pinky_top
+      shift: [-pcb_outline_spacingx, pcb_outline_spacingy]
+    - ref: matrix_middle_top
+      shift: [0, pcb_outline_spacingy]
+    - ref: matrix_inner_top
+      shift: [pcb_outline_spacingx, pcb_outline_spacingy]
+    - ref: matrix_inner_bottom
+      shift: [pcb_outline_spacingx, 0]
+    - ref: thumbfan_far_thumb
+      shift: [pcb_outline_spacingx, pcb_outline_spacingy]
+    - ref: thumbfan_far_thumb
+      shift: [pcb_outline_spacingx, -pcb_outline_spacingy]
+    - ref: matrix_pinky_bottom
+      shift: [-pcb_outline_spacingx, -pcb_outline_spacingy]
+    fillet: 10
+  panel:
+  - name: pcb_outline
+  - operation: subtract
+    name: keycaps
